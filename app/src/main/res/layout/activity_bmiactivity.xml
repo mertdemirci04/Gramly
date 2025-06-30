@@ -1,0 +1,136 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kapalimavi"
+    tools:context=".BMIActivity">
+
+<TextView
+    android:id="@+id/kilo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:text="Kilo"
+    android:textSize="35dp"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toEndOf="@+id/kilotext"
+    app:layout_constraintStart_toStartOf="@+id/kilotext"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/kilotext"
+    android:layout_width="0dp"
+    android:layout_height="58dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="10dp"
+    android:ems="10"
+    android:hint="Kilonuzu Girin (kg)..."
+    android:textColorHint="@color/white"
+    android:inputType="number"
+    android:backgroundTint="@color/yesil"
+    android:textColor="@color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/kilo" />
+
+<TextView
+    android:id="@+id/boy"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:text="Boy"
+    android:textSize="35dp"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toEndOf="@+id/boytext"
+    app:layout_constraintStart_toStartOf="@+id/boytext"
+    app:layout_constraintTop_toBottomOf="@+id/kilotext" />
+
+<EditText
+    android:id="@+id/boytext"
+    android:layout_width="0dp"
+    android:layout_height="58dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="10dp"
+    android:ems="10"
+    android:hint="Boyunuzu Girin (cm)..."
+    android:inputType="number"
+    android:backgroundTint="@color/yesil"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/boy" />
+
+<RadioGroup
+android:id="@+id/genderGroup"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@id/boytext"
+android:layout_marginTop="30dp">
+
+<RadioButton
+    android:id="@+id/maleRadioButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Erkek"
+    android:textSize="20dp"
+    android:textColor="@color/white"
+android:buttonTint="@color/acikmavi"
+android:checked="true" />
+
+<RadioButton
+    android:id="@+id/femaleRadioButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Kadın"
+    android:textSize="20dp"
+    android:textColor="@color/white"
+    android:buttonTint="@color/acikmavi" />
+</RadioGroup>
+
+<Button
+android:id="@+id/bmiHesapla"
+android:layout_width="192dp"
+android:layout_height="81dp"
+android:layout_marginTop="20dp"
+android:onClick="bmiHesapla"
+android:text="BMI Hesapla"
+android:textSize="20dp"
+android:backgroundTint="@color/turuncu"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/genderGroup" />
+
+<TextView
+android:id="@+id/bmi"
+android:layout_width="wrap_content"
+android:layout_height="48dp"
+android:layout_marginTop="65dp"
+android:text="BMI Değeriniz : "
+android:textSize="35dp"
+android:textStyle="bold"
+android:textColor="@color/white"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/bmiHesapla" />
+
+<TextView
+android:id="@+id/yorum"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="40dp"
+android:text="Yorumlar"
+android:textSize="23dp"
+android:textColor="@color/white"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/bmi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

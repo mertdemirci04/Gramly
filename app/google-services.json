@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "382114852499",
+    "project_id": "besinkitabi-72b80",
+    "storage_bucket": "besinkitabi-72b80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382114852499:android:e4af830a24260c89bd6766",
+        "android_client_info": {
+          "package_name": "com.example.recyclerviewlist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDALQ9A29_A3JRmbdIiPG_DRxTok1KwD0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

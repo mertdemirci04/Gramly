@@ -1,0 +1,164 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:padding="24dp">
+
+    <!-- Resim -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/ImageRoundedStyle" />
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/besinIsim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tavuk Göğsü"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1E3A8A"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- 100g bilgisi -->
+    <TextView
+        android:id="@+id/yuzgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100g'da"
+        android:textColor="#64748B"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/besinIsim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Besin değerleri -->
+    <LinearLayout
+        android:id="@+id/besinBilgileriLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/yuzgram"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/besinkarbonhidrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Karbonhidrat: 57g"
+            android:textColor="#0F172A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingVertical="7dp" />
+
+        <TextView
+            android:id="@+id/besinProtein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Protein: 30g"
+            android:textColor="#0F172A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingVertical="7dp" />
+
+        <TextView
+            android:id="@+id/besinYag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yağ: 10g"
+            android:textColor="#0F172A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingVertical="7dp" />
+    </LinearLayout>
+
+    <!-- Kalori -->
+    <TextView
+        android:id="@+id/besinKalori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalori: 180 kcal"
+        android:textColor="#2563EB"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/besinBilgileriLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp" />
+
+    <!-- Gram input: Yatay düzen -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/besinKalori">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:text="Gram:"
+            android:textColor="#475569"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/gramtext"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_background"
+            android:hint="örn. 100"
+            android:inputType="number"
+            android:textColorHint="#94A3B8"
+            android:textColor="@color/kapalimavi"
+            android:textSize="18sp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+    </LinearLayout>
+
+    <!-- Buton -->
+    <Button
+        android:id="@+id/yedimBtn"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#10B981"
+        android:onClick="yedimButton"
+        android:text="Bunu Yedim!"
+        android:background="@drawable/yedim_button_background"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:letterSpacing="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

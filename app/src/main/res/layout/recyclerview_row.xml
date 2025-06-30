@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:padding="8dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/card_background"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/besinisim1"
+            android:text="Besin Adı"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1E3A8A" />
+
+        <TextView
+            android:id="@+id/besinkarbonhidrat1"
+            android:text="Karbonhidrat: 20g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#475569"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/besinprotein1"
+            android:text="Protein: 10g"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#475569"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/besinyag1"
+            android:text="Yağ: 5g"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#475569"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/besinkalori1"
+            android:text="Kalori: 120 kcal"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3B82F6"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+</GridLayout>

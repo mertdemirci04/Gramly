@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_dark"
+    android:gravity="center_horizontal">
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kilonuz"
+        android:textColor="@color/primary_amber"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText -->
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kilonuzu Girin..."
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/accent_light"
+        android:textColorHint="@color/input_hint"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Buton -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kiloyu Kaydet"
+        android:textColor="@color/accent_light"
+        android:background="@drawable/modern_button_background"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp"
+        android:textSize="16sp"
+        android:padding="12dp" />
+    <!-- Verileri Temizle Butonu -->
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tüm Verileri Temizle"
+        android:textColor="@color/accent_light"
+        android:background="@drawable/btn_false"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+
+    <!-- Grafik Başlık -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kilodaki Gelişme"
+        android:textColor="@color/input_hint"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Grafik -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/chart_background" />
+</LinearLayout>
